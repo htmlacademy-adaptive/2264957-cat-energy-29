@@ -9,28 +9,30 @@
   <body class="page__body">
     <header class="main-header">
       <!-- Навигация -->
+      <div class="main-header__wrapper">
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/logo/logo-mobile.svg" width="33" height="38" alt="Логотип кота продукции кэт енерджи">
       </a>
-      <a class="main-header-center__logo">
-        <img class="main-header-center__logo-image" src="img/logo/logo-2.svg" width="101" height="18" alt="Логотип надпись кэт енерджи">
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="img/logo/logo-2.svg" width="101" height="18" alt="Логотип надпись кэт енерджи">
       </a>
+    </div>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="navigation-link" href="#">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__item-link" href="#">
                 Главная
               </a>
             </li>
-            <li class="site-list__item">
-              <a class="navigation-link" href="catalog.html">
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="catalog.html">
                 Каталог продукции
               </a>
             </li>
-            <li class="site-list__item">
-              <a class="navigation-link" href="#">
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">
                 Подбор программы
               </a>
             </li>
@@ -45,8 +47,8 @@
 <!-- Форма заявки -->
 <section class="application">
   <h2 class="visually-hidden">Форма заявки</h2>
-  <p class="application-title">Подбор программы</p>
-  <p class="application-description">
+  <p class="application__title">Подбор программы</p>
+  <p class="application__description">
     Заполните анкету, и мы подберем
 программу питания для вашего кота
   </p>
@@ -175,7 +177,7 @@
       </li>
   </ul>
 </fieldset>
-<button class="catalog-button" type="submit">отправить заявку</button>
+<button class="catalog__button" type="submit">отправить заявку</button>
 <small class="form__legend">
   * — Обязательные поля
 </small>
@@ -189,9 +191,9 @@
 <!-- Контакты -->
 <section class="contacts">
   <h2 class="visually-hidden">Контактная информация</h2>
-  <h3 class="contacts-title">приглашаем к сотрудничеству дилеров!</h3>
-  <address class="address-point">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-  <img class="contacts-map" src="img/map.jpg" alt="кэт энерджи на карте">
+  <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
+  <address class="contacts__address-point">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+  <img class="contacts__map" src="img/map.jpg" alt="кэт энерджи на карте">
 </section>
 </main>
 <!-- Подвал -->
@@ -201,13 +203,13 @@
   </a>
 
 <div class="social">
-  <a class="social-vk" href="#">
+  <a class="social__vk" href="#">
     <span class="visually-hidden">В контакте</span>
   </a>
-  <a class="social-yt" href="#">
+  <a class="social__yt" href="#">
     <span class="visually-hidden">Ютуб</span>
   </a>
-  <a class="social-tg" href="#">
+  <a class="social__tg" href="#">
     <span class="visually-hidden">Телеграм</span>
   </a>
 </div>
