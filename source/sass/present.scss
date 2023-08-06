@@ -1,0 +1,22 @@
+.present {
+  background-image: url("../img/background/present-back.jpg");
+  background-color: #68b738;
+  width: 280px;
+  height: 290px;
+  background-repeat: no-repeat;
+  display: block;
+  padding: 187px 60px 43px 60px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.present__title {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
