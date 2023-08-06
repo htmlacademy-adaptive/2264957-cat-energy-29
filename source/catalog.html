@@ -25,7 +25,7 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__item-link" href="#">
+            <a class="main-nav__item-link" href="index.html">
               Главная
             </a>
           </li>
@@ -35,7 +35,7 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
+            <a class="main-nav__item-link" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -298,7 +298,7 @@
         <li class="catalog__item">
           <p class="catalog__item-title catalog__item-title-mini">Показать еще 100500 товаров</p>
           <p class="catalog__item-title catalog__item-title-mini-description">На самом деле вкусов гораздо больше!</p>
-          <button class="site__button--grey site__button-catalog" type="button">показать все</button>
+          <button class="site__button site__button-catalog site__button--grey" type="button">показать все</button>
         </li>
       </ul>
     </section>
@@ -316,7 +316,7 @@
               200 ₽
             </dd>
           </dl>
-          <button class="catalog__button" type="button">Заказать</button>
+          <button class="site__button site__button-catalog" type="button">Заказать</button>
         </li>
 
         <li class="additionally__item">
@@ -329,7 +329,7 @@
               50 ₽
             </dd>
           </dl>
-          <button class="catalog__button" type="button">Заказать</button>
+          <button class="site__button site__button-catalog" type="button">Заказать</button>
         </li>
 
         <li class="additionally__item">
@@ -342,7 +342,7 @@
               100 ₽
             </dd>
           </dl>
-          <button class="catalog__button" type="button">Заказать</button>
+          <button class="site__button site__button-catalog" type="button">Заказать</button>
         </li>
 
         <li class="additionally__item">
@@ -355,26 +355,29 @@
               300 ₽
             </dd>
           </dl>
-          <button class="catalog__button" type="button">Заказать</button>
+          <button class="site__button site__button-catalog" type="button">Заказать</button>
         </li>
 
       </ul>
     </section>
     <!-- Подарок -->
 
-    <article class="present">
+    <article class="container">
+      <div class="present">
       <h2 class="present__title">
-        Закажите все и получите чехол для кота в подарок!
+        Закажите все<br> и получите чехол для кота в подарок!
       </h2>
-
+    </div>
     </article>
 
 
     <!-- Контакты -->
-    <section class="contacts">
+    <section class="contacts container">
       <h2 class="visually-hidden">Контактная информация</h2>
-      <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
-      <address class="contacts__address-point">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <div class="contacts__wrapper">
+        <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
+        <address class="contacts__address-point">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
       <img class="contacts__map" src="img/map.jpg" alt="кэт энерджи на карте">
     </section>
   </main>
