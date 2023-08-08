@@ -1,3 +1,5 @@
+@use "../sass/mixins/media.scss"as m;
+
 .additionally__main-title {
 margin: 0;
 color: #000000;
@@ -55,6 +57,22 @@ line-height: 14px;
 
 .additionally__item {
   margin-bottom: 13px;
+
+  @include m.desktop {
+   display: flex;
+   justify-content: space-between;
+  }
+}
+
+.site__button-catalog-bottom {
+
+  @include m.tablet {
+    width: 100%;
+  }
+
+  @include m.tablet {
+    width: 192px;
+  }
 }
 
 

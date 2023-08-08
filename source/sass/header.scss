@@ -1,3 +1,5 @@
+@use "../sass/mixins/media.scss"as m;
+
 .main-header {
   background-color: #ffffff;
 }
@@ -13,9 +15,11 @@
   }
 
 
-  &:active{
+  &:active {
     opacity: 0.6;
   }
+
+
 }
 
 
@@ -23,14 +27,35 @@
 .main-nav__list {
   margin: 0;
   padding: 0;
+
+  @include m.tablet {
+    width: 450px;
+    margin-left: auto;
+    display: flex;
+  }
 }
 
 .main-nav__item-link {
-color: #000000;
-font-family: "Oswald", sans-serif;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;
-text-transform: uppercase;
+  color: #000000;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  @include m.tablet {
+    font-size: 18px;
+  }
+}
+
+.main-nav__item {
+  padding: 24px 0;
+  text-align: center;
+}
+
+.main-nav__item:not(:last-child) {
+  @include m.tablet {
+    padding-right: 33px;
+  }
 }

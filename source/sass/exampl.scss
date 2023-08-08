@@ -1,9 +1,30 @@
+@use "../sass/mixins/media.scss"as m;
+
 .exampl {
   background-color: #eaeaea;
+
+  @include m.tablet {
+    background-image: linear-gradient(#ffffff 310px, #eaeaea 310px, #eaeaea);
+  }
+
+  @include m.desktop {
+    display: flex;
+  }
 }
+
 
 .exampl__wrapper {
   padding: 25px 20px 40px 20px;
+
+
+}
+
+.exampl__tablet {
+
+  @include m.tablet {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .exampl__title {
@@ -15,6 +36,12 @@
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
+
+  @include m.tablet {
+  font-size: 60px;
+  line-height: 60px;
+  text-align: left;
+  }
 }
 
 .exampl__description {
