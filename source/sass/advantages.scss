@@ -27,12 +27,12 @@
 
   @include m.tablet {
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 1fr 1fr;
     column-gap: 153px;
     row-gap: 57px;
   }
 
-  @include m.tablet {
+  @include m.desktop {
     display: flex;
   }
 }

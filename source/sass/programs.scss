@@ -30,7 +30,7 @@
 }
 
 .programs__slogan {
-  margin: 0 0 29px 0;
+  margin: 0 0 302px 0;
   color: #ffffff;
   font-family: inherit;
   font-size: 14px;
@@ -44,17 +44,18 @@
     font-size: 20px;
     line-height: 20px;
     text-align: left;
-    margin-bottom: 21px;
+    margin-bottom: 50px;
   }
 }
 
 .programs__image {
-  margin: 0 auto;
-  display: block;
+  position: absolute;
+  top: 35%;
 
   @include m.tablet {
     width: 709px;
     height: 609px;
+    z-index: -1;
   }
 }
 
@@ -75,11 +76,12 @@
 
 .site__button-programs {
   @include m.tablet {
-    position: absolute;
-    left: 37px;
-    top: 239px;
-    min-width: 242px;
+    width: 192px;
+    display: inline-block;
     padding: 14px 26px;
+    margin-bottom: 526px;
+    top: 28%;
+    left: 40%;
   }
 }
 
