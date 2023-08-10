@@ -2,10 +2,26 @@
 
 .main-header {
   background-color: #ffffff;
+  position: relative;
+
+  @include m.tablet {
+    display: flex;
+  }
+
+  @include m.desktop {
+    display: flex;
+  }
 }
 
-.main-header-main {
-  margin-bottom: 65px;
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header__logo-wrapper {
+  display: inline-block;
 }
 
 .main-header__logo-image {
@@ -17,6 +33,14 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  @include m.tablet {
+    display: none;
+  }
+
+  @include m.desktop {
+    display: none;
   }
 
 
@@ -55,7 +79,87 @@
 }
 
 .main-nav__item:not(:last-child) {
+
   @include m.tablet {
     padding-right: 33px;
   }
 }
+
+.main-header__logo-image-desktop {
+  display: block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__logo-image-tablet {
+  display: block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__logo-image-mobile {
+  display: block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__button {
+  background-image: url(../img/icon/icon-header-button.svg);
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: #ffffff;
+
+  @include m.tablet {
+    display: none;
+  }
+
+  @include m.desktop {
+    display: none;
+  }
+}
+
+.main-header__nav {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 3;
+  display: none;
+
+
+  @include m.tablet {
+    position: static;
+    display: block;
+    width: auto;
+  }
+
+  @include m.desktop {
+    position: static;
+    display: block;
+    width: auto;
+  }
+}
+
+
