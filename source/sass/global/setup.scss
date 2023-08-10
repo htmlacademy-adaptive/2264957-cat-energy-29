@@ -1,0 +1,64 @@
+@use "../sass/mixins/media.scss" as m;
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+
+  @include m.tablet {
+    width: 709px;
+  }
+
+  @include m.desktop {
+    width: 1220px;
+  }
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+dl {
+  margin: 0;
+}
+
+:root {
+  --basic-white: #ffffff;
+  --green: #68b738;
+  --grey: #f2f2f2;
+}
+

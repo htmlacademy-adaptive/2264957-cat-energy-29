@@ -1,3 +1,5 @@
+@use "../sass/mixins/media.scss"as m;
+
 .catalog__title {
   color: #000000;
   font-family: inherit;
@@ -6,11 +8,31 @@
   font-weight: 400;
   line-height: 36px;
   margin: 27px 0 41px 0;
+
+  @include m.tablet {
+    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .catalog__list {
   margin: 0;
   padding: 0 20px;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    column-gap: 60px;
+    row-gap: 94px;
+  }
+
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: 245px 245px 245px 245px;
+    column-gap: 80px;
+    row-gap: 60px;
+  }
 }
 
 .catalog-main__list {
@@ -19,12 +41,26 @@
 
 .catalog__item {
   margin-bottom: 25px;
+
+  @include m.tablet {
+    background-image: linear-gradient(#ffffff 80px, #eaeaea 80px, #eaeaea);
+    padding: 0 36px 39px 36px;
+  }
+
 }
 
 .catalog__item-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 19px 0;
+
+  @include m.tablet {
+    display: block;
+  }
+}
+
+.catalog__item-wrapper-last {
+  padding-top: 150px;
 }
 
 .catalog-main__title {
@@ -36,6 +72,19 @@
   line-height: 20px;
   text-transform: uppercase;
   margin-top: 18px;
+
+  @include m.tablet {
+    display: block;
+    text-align: center;
+  }
+}
+
+.catalog__item-image {
+
+  @include m.tablet {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .catalog-main__compound,
@@ -52,32 +101,43 @@
 .catalog-main__item {
   display: flex;
   justify-content: space-between;
+
 }
 
 .site__button-catalog {
   width: 280px;
+
+  @include m.tablet {
+    width: 250px;
+  }
+
+  @include m.tablet {
+    width: 169px;
+  }
 }
+
+
 
 .catalog__item-title {
   margin: 0;
   color: #111111;
-text-align: center;
-font-family: inherit;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 20px;
-text-transform: uppercase;
-margin-bottom: 8px;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 .catalog__item-title-mini-description {
   color: #444444;
-text-align: center;
-font-family: "Lato";
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 16px;
-margin-bottom: 21px;
+  text-align: center;
+  font-family: "Lato";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin-bottom: 21px;
 }

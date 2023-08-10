@@ -1,18 +1,4 @@
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
-  font-display: swap;
-}
 
 
 
@@ -28,6 +14,10 @@
 @import "../sass/additionally.scss";
 @import "../sass/present.scss";
 @import "../sass/form.scss";
+@import "../sass/global/setup.scss";
+@import "../sass/mixins/media.scss";
+@import "../sass/global/fonts.scss";
+@import "../sass/global/variables.scss";
 
 
 

@@ -1,9 +1,16 @@
+@use "../sass/mixins/media.scss"as m;
+
 .page__footer {
   background-color: #f2f2f2;
 }
 
 .page__footer-wrapper {
   padding: 40px 20px;
+
+  @include m.tablet {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer__logo-image {
