@@ -78,6 +78,21 @@
   text-align: center;
 }
 
+.main-nav__item--current {
+  position: relative;
+}
+
+.main-nav__item--current::after {
+  position: absolute;
+  content: "";
+  top: 75%;
+  left: 0;
+  width: 64px;
+  height: 2px;
+  background-color:#68B738;
+}
+
+
 .main-nav__item:not(:last-child) {
 
   @include m.tablet {
@@ -161,5 +176,4 @@
     width: auto;
   }
 }
-
 
