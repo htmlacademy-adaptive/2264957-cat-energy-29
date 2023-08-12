@@ -149,17 +149,21 @@
 }
 
 .programs__item-title--slim::after {
-  background-image: url(../img/cats/cat-slim-mobile.svg);
+  background-image: url("../img/cats/cat-slim-mobile.svg");
   width: 36px;
   height: 50px;
   z-index: 2;
+  left: 7px;
+  top: -3px;
 }
 
 .programs__item-title--pro::after {
-  background-image: url(../img/cats/cat-pro-mobile.svg);
+  background-image: url("../img/cats/cat-pro-mobile.svg");
   width: 67px;
   height: 28px;
   z-index: 2;
+  top: 10px;
+  left: -8px;
 }
 
 
