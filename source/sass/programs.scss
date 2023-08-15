@@ -105,12 +105,17 @@
 }
 
 .programs__item {
+  position: relative;
   padding: 20px 20px;
   background-color: #f2f2f2;
   margin-bottom: 20px;
 
+  @include m.tablet {
+    padding: 77px 28px 57px 52px;
+  }
+
   @include m.desktop {
-    width: 570px;
+    padding: 41px 61px 59px 52px;
   }
 }
 
@@ -124,6 +129,14 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+
+  @include m.tablet {
+    text-align: left;
+  }
+
+  @include m.desktop {
+    text-align: center;
+  }
 }
 
 .programs__item-title::before {
@@ -136,6 +149,21 @@
   height: 50px;
   background-color: #68b738;
   border-radius: 50%;
+
+  @include m.tablet {
+    width: 200px;
+    height: 200px;
+    left: 66%;
+  }
+
+
+  @include m.desktop {
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 0;
+  }
+
 }
 
 .programs__item-title::after {
@@ -155,15 +183,47 @@
   z-index: 2;
   left: 7px;
   top: -3px;
+
+
+  @include m.tablet {
+    background-image: url("../img/cats/cat-slim-tablet.svg");
+    width: 140px;
+    height: 194px;
+    left: 70%;
+  }
+
+  @include m.desktop {
+    background-image: url("../img/cats/cat-slim-desk.svg");
+    width: 70px;
+    height: 97px;
+    left: 11px;
+    top: -3px;
+  }
+
 }
 
 .programs__item-title--pro::after {
   background-image: url("../img/cats/cat-pro-mobile.svg");
   width: 67px;
   height: 28px;
-  z-index: 2;
   top: 10px;
   left: -8px;
+
+  @include m.tablet {
+    background-image: url("../img/cats/cat-pro-tablet.svg");
+    width: 268px;
+    height: 112px;
+    left: 61%;
+    top: 115%;
+  }
+
+  @include m.desktop {
+    background-image: url("../img/cats/cat-pro-desk.svg");
+    width: 134px;
+    height: 56px;
+    left: -17px;
+    top: 19px;
+  }
 }
 
 
@@ -176,9 +236,40 @@
   font-weight: 400;
   line-height: 18px;
   margin: 29px 0 0 0;
+  width: 228px;
+
+  @include m.tablet {
+    margin-top: 24px;
+    margin-bottom: 52px;
+    width: 340px;
+  }
+
+  @include m.desktop {
+    margin-top: 73px;
+    margin-bottom: 27px;
+    width: 457px;
+  }
+}
+
+.programs__item-description::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 240px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-top: 23px;
+
+  @include m.tablet {
+    display: none;
+  }
+
+  @include m.desktop {
+    display: none;
+  }
 }
 
 .programs__item-button {
+  display: inline-block;
   color: #000000;
   text-align: center;
   font-family: inherit;
@@ -186,7 +277,7 @@
   font-style: normal;
   line-height: 16px;
   text-transform: uppercase;
-  margin-top: 42px;
+  margin-top: 37px;
 }
 
 .programs__item-button::after {

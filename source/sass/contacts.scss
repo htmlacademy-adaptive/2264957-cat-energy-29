@@ -1,3 +1,5 @@
+@use "../sass/mixins/media.scss"as m;
+
 .contacts {
   background-color: #ffffff;
   position: relative;
@@ -6,7 +8,14 @@
 .contacts__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 26px 20px;
+  padding: 26px 0;
+  background-color: #ffffff;
+
+  @include m.desktop {
+    position: absolute;
+    padding: 80px 60px;
+    width: 565px;
+  }
 }
 
 .contacts__title {

@@ -3,9 +3,11 @@
 .present {
   background-image: url("../img/background/present-back.jpg");
   background-color: #68b738;
-  width: 280px;
+  width: 100%;
   height: 290px;
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   display: block;
   padding: 187px 60px 43px 60px;
   box-sizing: border-box;
