@@ -1,7 +1,7 @@
 @use "../sass/mixins/media.scss"as m;
 
 .main-header {
-  background-color: #ffffff;
+  background-color: transparent;
   position: relative;
 
   @include m.tablet {
@@ -53,7 +53,6 @@
   padding: 0;
 
   @include m.tablet {
-    width: 450px;
     margin-left: auto;
     display: flex;
   }
@@ -71,6 +70,18 @@
   @include m.tablet {
     font-size: 18px;
   }
+
+  @include m.desktop {
+    font-size: 20px;
+    color: #ffffff;
+  }
+}
+
+.main-nav__item-link-catalog {
+
+  @include m.desktop {
+    color: #000000;
+  }
 }
 
 .main-nav__item {
@@ -78,18 +89,24 @@
   text-align: center;
 }
 
-.main-nav__item--current {
+.main-nav__item-link--current {
   position: relative;
 }
 
-.main-nav__item--current::after {
+.main-nav__item-link--current::after {
   position: absolute;
   content: "";
   top: 75%;
   left: 0;
-  width: 64px;
+  width: 100%;
+  display: block;
   height: 2px;
   background-color:#68B738;
+  margin-top: 8px;
+
+  @include m.desktop {
+    background-color: #ffffff;
+  }
 }
 
 
@@ -159,7 +176,7 @@
   position: absolute;
   top: 100%;
   width: 100%;
-  background-color: #ffffff;
+  background-color: transparent;
   z-index: 3;
   display: none;
 
@@ -168,12 +185,14 @@
     position: static;
     display: block;
     width: auto;
+    margin-left: auto;
   }
 
   @include m.desktop {
     position: static;
     display: block;
     width: auto;
+    margin-left: auto;
   }
 }
 

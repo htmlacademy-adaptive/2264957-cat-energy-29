@@ -41,17 +41,6 @@
   }
 }
 
-.advantages__list::after {
-
-  @include m.tablet {
-  content: counter(advantages);
-  color: #f2f2f2;
-  font-size: 200px;
-  line-height: 230px;
-  font-family: "Oswald";
-  z-index: -1;
-  }
-}
 
 .advantages__item::after {
 

@@ -9,9 +9,9 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header-main">
+  <header class="main-header main-header-main container">
     <!-- Навигация -->
-    <div class="main-header__wrapper container">
+    <div class="main-header__wrapper">
       <a class="main-header__logo" href="#">
         <picture class="main-header__logo-wrapper">
           <source class="main-header__logo-image-desktop" width="202" height="59" srcset="img/logo/logo-desktop.svg"
@@ -31,8 +31,8 @@
     <nav class="main-nav main-header__nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__item-link" href="#">
+          <li class="main-nav__item ">
+            <a class="main-nav__item-link main-nav__item-link--current" href="#">
               Главная
             </a>
           </li>
@@ -122,8 +122,8 @@
               <dt class="exampl__number">
                 5 КГ
               </dt>
-              <dd class="exampl__description">
-                снижение<br>
+              <dd class="exampl__description exampl__description-table">
+                снижение
                 веса
               </dd>
             </div>
@@ -131,8 +131,8 @@
               <dt class="exampl__number">
                 60 ДНЕЙ
               </dt>
-              <dd class="exampl__description">
-                затрачено<br>
+              <dd class="exampl__description exampl__description-table">
+                затрачено
                 времени
               </dd>
             </div>
@@ -148,10 +148,12 @@
     <!-- Контакты -->
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
-      <div class="contacts__wrapper  container">
+      <div class="container">
+      <div class="contacts__wrapper">
         <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
         <address class="contacts__address-point">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
+    </div>
       <picture class="contacts__wrapper-image">
         <source class="contacts__map" srcset="img/map-desktop.jpg" width="1440" height="400"
           media="(min-width: 1440px)">

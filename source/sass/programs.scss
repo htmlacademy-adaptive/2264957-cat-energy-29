@@ -15,6 +15,11 @@
   @include m.tablet {
     background-image: none;
   }
+
+  @include m.desktop {
+    position: static;
+    padding: 100px 20px 0 80px;
+  }
 }
 
 .programs__title {
@@ -63,7 +68,7 @@
   }
 
   @include m.desktop {
-    top: 0;
+    top: 143px;
     right: 25%;
   }
 }
@@ -121,6 +126,9 @@
 
 .programs__item-title {
   position: relative;
+  display: flex;
+  gap: 27px;
+  align-items: center;
   color: #000000;
   font-family: inherit;
   font-size: 24px;
@@ -131,24 +139,27 @@
   margin: 0;
 
   @include m.tablet {
+    flex-direction: row-reverse;
     text-align: left;
   }
 
   @include m.desktop {
     text-align: center;
+    flex-direction: row;
+    gap: 62px;
   }
 }
 
 .programs__item-title::before {
   content: "";
   display: inline-block;
-  position: absolute;
   top: 0;
   left: 0;
   width: 50px;
   height: 50px;
   background-color: #68b738;
   border-radius: 50%;
+  flex-shrink: 0;
 
   @include m.tablet {
     width: 200px;
@@ -182,7 +193,8 @@
   height: 50px;
   z-index: 2;
   left: 7px;
-  top: -3px;
+  top: 50%;
+  transform: translateY(-50%);
 
 
   @include m.tablet {
@@ -190,6 +202,8 @@
     width: 140px;
     height: 194px;
     left: 70%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   @include m.desktop {
@@ -197,7 +211,8 @@
     width: 70px;
     height: 97px;
     left: 11px;
-    top: -3px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
 }
@@ -206,15 +221,17 @@
   background-image: url("../img/cats/cat-pro-mobile.svg");
   width: 67px;
   height: 28px;
-  top: 10px;
   left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
 
   @include m.tablet {
     background-image: url("../img/cats/cat-pro-tablet.svg");
     width: 268px;
     height: 112px;
     left: 61%;
-    top: 115%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   @include m.desktop {
@@ -222,7 +239,8 @@
     width: 134px;
     height: 56px;
     left: -17px;
-    top: 19px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -297,11 +315,9 @@
   width: 100%;
   height: 302px;
   position: absolute;
-  background-color: #68b738d9;
-  background-image: url("../img/background/background-mobile-black.png");
+  background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/background/background-mobile-black.png");
   background-size: cover;
   background-position: center;
-  background-blend-mode: overlay;
   left: 0;
   top: 0;
   z-index: -1;
@@ -313,16 +329,15 @@
   @include m.desktop {
     content: "";
     display: block;
-    background-color: rgba(104, 183, 56, 0.85);
     background-image: none;
-    background-image: url("../img/background/background-desktop.png");
+    background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/background/background-desktop.png");
     background-size: cover;
     background-position: right;
-    background-blend-mode: overlay;
     width: 50%;
     height: 720px;
     left: auto;
     right: 0;
     top: 0;
+    z-index: -1;
   }
 }

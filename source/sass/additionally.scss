@@ -56,12 +56,21 @@
 }
 
 .additionally__item {
+  position: relative;
   margin-bottom: 13px;
 
   @include m.desktop {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 325px 1fr 100px 245px;
   }
+}
+
+.additionally__item::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-bottom: 1px solid #cdcdcd;
+  width: 100%;
 }
 
 .site__button-catalog-bottom {
@@ -70,7 +79,7 @@
     width: 100%;
   }
 
-  @include m.tablet {
+  @include m.desktop {
     width: 192px;
   }
 }
