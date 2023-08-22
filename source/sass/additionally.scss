@@ -21,6 +21,10 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+
+  @include m.desktop {
+    text-align: start;
+  }
 }
 
 .additionally__compound {
@@ -53,6 +57,10 @@
 .additionally__list {
   margin: 50px 0;
   padding: 0;
+
+  @include m.desktop {
+    max-width: 896px;
+  }
 }
 
 .additionally__item {
@@ -61,7 +69,7 @@
 
   @include m.desktop {
     display: grid;
-    grid-template-columns: 325px 1fr 100px 245px;
+    grid-template-columns: 325px 1fr 245px;
   }
 }
 
@@ -82,5 +90,12 @@
 
   @include m.desktop {
     width: 192px;
+  }
+}
+
+.additionally-wrapper {
+
+  @include m.desktop {
+    display: flex;
   }
 }

@@ -139,11 +139,12 @@
   margin: 0;
 
   @include m.tablet {
-    flex-direction: row-reverse;
     text-align: left;
+    position: static;
   }
 
   @include m.desktop {
+    position: relative;
     text-align: center;
     flex-direction: row;
     gap: 62px;
@@ -162,6 +163,9 @@
   flex-shrink: 0;
 
   @include m.tablet {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 200px;
     height: 200px;
     left: 66%;
@@ -169,6 +173,7 @@
 
 
   @include m.desktop {
+    position: static;
     width: 100px;
     height: 100px;
     left: 0;
