@@ -85,8 +85,26 @@
 }
 
 .main-nav__item {
+  position: relative;
   padding: 24px 0;
   text-align: center;
+}
+
+.main-nav__item:before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #cdcdcd;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  @include m.tablet {
+    border: none;
+  }
+
+  @include m.desktop {
+    border: none;
+  }
 }
 
 .main-nav__item-link--current {
@@ -94,15 +112,18 @@
 }
 
 .main-nav__item-link--current::after {
-  position: absolute;
-  content: "";
-  top: 75%;
-  left: 0;
-  width: 100%;
-  display: block;
-  height: 2px;
-  background-color:#68B738;
-  margin-top: 8px;
+
+  @include m.tablet {
+    position: absolute;
+    content: "";
+    top: 75%;
+    left: 0;
+    width: 100%;
+    display: block;
+    height: 2px;
+    background-color: #68B738;
+    margin-top: 8px;
+  }
 
   @include m.desktop {
     background-color: #ffffff;
@@ -172,11 +193,21 @@
   }
 }
 
+.toggle_closed {
+  background-image: url(../img/icon/icon-header-close.svg);
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .main-header__nav {
   position: absolute;
   top: 100%;
   width: 100%;
-  background-color: transparent;
+  background-color: #ffffff;
   z-index: 3;
   display: none;
 
@@ -186,6 +217,7 @@
     display: block;
     width: auto;
     margin-left: auto;
+    background-color: transparent;
   }
 
   @include m.desktop {
@@ -193,6 +225,22 @@
     display: block;
     width: auto;
     margin-left: auto;
+    background-color: transparent;
   }
 }
 
+.menu-nav_opened {
+  display: block;
+}
+
+.no-js {
+  .menu-nav_opened {
+    display: block;
+  }
+}
+
+.no-js {
+  .main-header__button {
+    display: none;
+  }
+}

@@ -1,4 +1,4 @@
-
+@use "../sass/mixins/media.scss"as m;
 
 .application__title {
   color: #000000;
@@ -21,15 +21,37 @@
   text-transform: uppercase;
 }
 
-.about-filter__group {
+.form__about {
   margin: 0;
   border: none;
   padding: 24px 0;
 }
 
-.about__list {
+.form__about-list {
   margin: 0;
   padding: 0;
+}
+
+.form__about-list-fat {
+
+  @include m.tablet {
+  border: 2px solid #cdcdcd;
+  width: 100%;
+  padding: 23px 27px;
+  }
+}
+
+.form__about-list-add {
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include m.desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .programs-form__list {
@@ -42,13 +64,23 @@
   padding: 0;
 }
 
-.enter-name,
-.enter-weight,
-.enter-old {
+.form__about-item-name {
   margin-right: 18px;
+  flex-shrink: 0;
+  color: #444444;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
-.about__item:not(:last-child) {
+.form__about-item {
+  display: flex;
+}
+
+.form__about-item:not(:last-child) {
   margin-bottom: 23px;
 }
 
@@ -62,6 +94,7 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .control-label {
@@ -118,13 +151,18 @@
   margin-bottom: 13px;
 }
 
-.about-filter__title {
+.form__about-title {
   color: #000000;
   font-family: inherit;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  margin-bottom: 36px;
+
+  @include m.tablet {
+    margin-bottom: 76px;
+  }
 }
 
 .about-add__list {
@@ -133,7 +171,7 @@
 }
 
 .about-add__item:not(:last-child) {
-margin-bottom: 13px;
+  margin-bottom: 13px;
 }
 
 .about-input-comment {
@@ -143,16 +181,42 @@ margin-bottom: 13px;
 
 .form__legend {
   color: #000000;
-text-align: center;
-font-family: "Lato", sans-serif;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 16px;
-margin-top: 21px;
-display: block;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin-top: 21px;
+  display: block;
 }
 
 .about-mail__item:not(:last-child) {
   margin-bottom: 14px;
 }
+
+.form__about-top {
+
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.form__about-bottom {
+
+  @include m.tablet {
+  display: flex;
+  justify-content: flex-start;
+  }
+}
+
+.site__button-form {
+
+  @include m.tablet {
+    width: 192px;
+  }
+}
+
+

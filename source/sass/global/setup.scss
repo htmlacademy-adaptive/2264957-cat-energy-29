@@ -68,6 +68,10 @@ dl {
 .line-mode {
   display: flex;
   gap: 20px;
+
+  @include m.tablet {
+    gap: 40px;
+  }
 }
 
 .line-mode::before {
