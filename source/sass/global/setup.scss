@@ -35,15 +35,16 @@ a {
 
 
 .container {
-  width: 320px;
+  max-width: 280px;
   margin: 0 auto;
+  width: 100%;
 
   @include m.tablet {
-    width: 709px;
+    max-width: 708px;
   }
 
   @include m.desktop {
-    width: 1220px;
+    max-width: 1220px;
   }
 
 }
@@ -60,5 +61,31 @@ dl {
   --basic-white: #ffffff;
   --green: #68b738;
   --grey: #f2f2f2;
+}
+
+/* green line */
+
+.line-mode {
+  display: flex;
+  gap: 20px;
+
+  @include m.tablet {
+    gap: 40px;
+  }
+}
+
+.line-mode::before {
+  content: "";
+  height: 15px;
+  width: calc(50% - 160px);
+  border-bottom: 2px solid #68b738;
+}
+
+.line-mode::after {
+  content: "";
+  height: 15px;
+  width: 10px;
+  border-bottom: 2px solid #68b738;
+  flex-grow: 1;
 }
 

@@ -4,11 +4,11 @@
   background-color: #eaeaea;
 
   @include m.tablet {
-    background-image: linear-gradient(#ffffff 310px, #eaeaea 310px, #eaeaea);
+    background-image: linear-gradient(#ffffff 440px, #eaeaea 440px, #eaeaea);
   }
 
   @include m.desktop {
-    display: flex;
+    background-image: linear-gradient(#ffffff 100px, #eaeaea 100px, #eaeaea);
   }
 }
 
@@ -16,14 +16,34 @@
 .exampl__wrapper {
   padding: 25px 20px 40px 20px;
 
-
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+  }
 }
+
+.slider {
+
+  @include m.desktop {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    align-self: center;
+  }
+}
+
 
 .exampl__tablet {
 
   @include m.tablet {
     display: flex;
     justify-content: space-between;
+  }
+
+  @include m.desktop {
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 1/2;
   }
 }
 
@@ -38,10 +58,15 @@
   line-height: 40px;
 
   @include m.tablet {
-  font-size: 60px;
-  line-height: 60px;
-  text-align: left;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
   }
+
+  @include m.desktop {
+    grid-column: 1/2;
+  }
+
 }
 
 .exampl__description {
@@ -51,14 +76,57 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  margin: 0 0 20px 0;
+  margin: 0;
+
+  @include m.desktop {
+    grid-column: 1/2;
+    width: 436px;
+  }
+}
+
+.exampl__description-table {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -10px;
+  background-color: #eaeaea;
+  padding: 0 5px;
+
+  @include m.tablet {
+    background-color: #ffffff;
+    width: 125px;
+    bottom: -4px;
+  }
+
+  @include m.desktop {
+    background-color: #eaeaea;
+  }
 }
 
 .exampl__list {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 20px 0;
+  margin: 20px 0 20px 0;
+  gap: 32px;
+
+  @include m.tablet {
+    gap: 42px;
+    margin: 55px 0 99px 0;
+  }
 }
+
+.exampl__item {
+  position: relative;
+  box-shadow: inset 0 0 0 1px #cdcdcd;
+  border-radius: 3px;
+  padding: 15px 15px 20px;
+  min-width: 124px;
+
+  @include m.tablet {
+    min-width: 169px;
+  }
+}
+
 
 .exampl__number {
   color: #000000;
@@ -68,6 +136,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  margin-bottom: 7px;
 }
 
 .exampl__description {

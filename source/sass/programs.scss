@@ -15,6 +15,11 @@
   @include m.tablet {
     background-image: none;
   }
+
+  @include m.desktop {
+    position: static;
+    padding: 100px 20px 0 80px;
+  }
 }
 
 .programs__title {
@@ -63,7 +68,7 @@
   }
 
   @include m.desktop {
-    top: 0;
+    top: 143px;
     right: 25%;
   }
 }
@@ -105,16 +110,25 @@
 }
 
 .programs__item {
+  position: relative;
   padding: 20px 20px;
   background-color: #f2f2f2;
   margin-bottom: 20px;
 
+  @include m.tablet {
+    padding: 77px 28px 57px 52px;
+  }
+
   @include m.desktop {
-    width: 570px;
+    padding: 41px 61px 59px 52px;
   }
 }
 
 .programs__item-title {
+  position: relative;
+  display: flex;
+  gap: 27px;
+  align-items: center;
   color: #000000;
   font-family: inherit;
   font-size: 24px;
@@ -123,7 +137,120 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+
+  @include m.tablet {
+    text-align: left;
+    position: static;
+  }
+
+  @include m.desktop {
+    position: relative;
+    text-align: center;
+    flex-direction: row;
+    gap: 62px;
+  }
 }
+
+.programs__item-title::before {
+  content: "";
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #68b738;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  @include m.tablet {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+    left: 66%;
+  }
+
+
+  @include m.desktop {
+    position: static;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
+}
+
+.programs__item-title::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.programs__item-title--slim::after {
+  background-image: url("../img/cats/cat-slim-mobile.svg");
+  width: 36px;
+  height: 50px;
+  z-index: 2;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+
+
+  @include m.tablet {
+    background-image: url("../img/cats/cat-slim-tablet.svg");
+    width: 140px;
+    height: 194px;
+    left: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include m.desktop {
+    background-image: url("../img/cats/cat-slim-desk.svg");
+    width: 70px;
+    height: 97px;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}
+
+.programs__item-title--pro::after {
+  background-image: url("../img/cats/cat-pro-mobile.svg");
+  width: 67px;
+  height: 28px;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include m.tablet {
+    background-image: url("../img/cats/cat-pro-tablet.svg");
+    width: 268px;
+    height: 112px;
+    left: 61%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include m.desktop {
+    background-image: url("../img/cats/cat-pro-desk.svg");
+    width: 134px;
+    height: 56px;
+    left: -17px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
 
 .programs__item-description {
   color: #444444;
@@ -133,9 +260,40 @@
   font-weight: 400;
   line-height: 18px;
   margin: 29px 0 0 0;
+  width: 228px;
+
+  @include m.tablet {
+    margin-top: 24px;
+    margin-bottom: 52px;
+    width: 340px;
+  }
+
+  @include m.desktop {
+    margin-top: 73px;
+    margin-bottom: 27px;
+    width: 457px;
+  }
+}
+
+.programs__item-description::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 240px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-top: 23px;
+
+  @include m.tablet {
+    display: none;
+  }
+
+  @include m.desktop {
+    display: none;
+  }
 }
 
 .programs__item-button {
+  display: inline-block;
   color: #000000;
   text-align: center;
   font-family: inherit;
@@ -143,7 +301,18 @@
   font-style: normal;
   line-height: 16px;
   text-transform: uppercase;
-  margin-top: 42px;
+  margin-top: 37px;
+}
+
+.programs__item-button::after {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/icon/icon_arrow.svg");
+  width: 32px;
+  height: 10px;
+  background-position: right;
+  background-repeat: no-repeat;
+  margin-left: 15px;
 }
 
 .programs__header::before {
@@ -152,11 +321,9 @@
   width: 100%;
   height: 302px;
   position: absolute;
-  background-color: #68b738d9;
-  background-image: url("../img/background/background-mobile-black.png");
+  background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/background/background-mobile-black.png");
   background-size: cover;
   background-position: center;
-  background-blend-mode: overlay;
   left: 0;
   top: 0;
   z-index: -1;
@@ -168,16 +335,15 @@
   @include m.desktop {
     content: "";
     display: block;
-    background-color: rgba(104, 183, 56, 0.85);
     background-image: none;
-    background-image: url("../img/background/background-desktop.png");
+    background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/background/background-desktop.png");
     background-size: cover;
     background-position: right;
-    background-blend-mode: overlay;
     width: 50%;
     height: 720px;
     left: auto;
     right: 0;
     top: 0;
+    z-index: -1;
   }
 }

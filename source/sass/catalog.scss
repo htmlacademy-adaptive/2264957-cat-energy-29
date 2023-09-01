@@ -18,18 +18,19 @@
 
 .catalog__list {
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
+
 
   @include m.tablet {
     display: grid;
-    grid-template-columns: 324px 324px;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
     column-gap: 60px;
     row-gap: 94px;
   }
 
   @include m.desktop {
     display: grid;
-    grid-template-columns: 245px 245px 245px 245px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
     row-gap: 60px;
   }
@@ -41,10 +42,11 @@
 
 .catalog__item {
   margin-bottom: 25px;
+  position: relative;
 
   @include m.tablet {
     background-image: linear-gradient(#ffffff 80px, #eaeaea 80px, #eaeaea);
-    padding: 0 36px 39px 36px;
+    padding: 210px 36px 39px 36px;
   }
 
 }
@@ -59,10 +61,6 @@
   }
 }
 
-.catalog__item-wrapper-last {
-  padding-top: 150px;
-}
-
 .catalog-main__title {
   color: #222222;
   font-family: inherit;
@@ -71,19 +69,33 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  margin-top: 18px;
+  margin-bottom: 14px;
 
   @include m.tablet {
     display: block;
     text-align: center;
+    margin-bottom: 20px;
   }
 }
 
 .catalog__item-image {
 
   @include m.tablet {
-    display: block;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%);
+  }
+}
+
+.catalog__item-image-s {
+
+  @include m.tablet {
+    top: 30px;
+  }
+
+  @include m.desktop {
+    top: 30px;
   }
 }
 
@@ -99,16 +111,32 @@
 }
 
 .catalog-main__item {
+  position: relative;
   display: flex;
   justify-content: space-between;
+}
 
+.catalog-main__item::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+
+  @include m.tablet {
+    width: 248px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  @include m.desktop {
+    width: 169px;
+    border-bottom: 1px solid #d9d9d9;
+  }
 }
 
 .site__button-catalog {
   width: 280px;
 
   @include m.tablet {
-    width: 250px;
+    width: 100%;
   }
 
   @include m.tablet {
@@ -140,4 +168,32 @@
   font-weight: 400;
   line-height: 16px;
   margin-bottom: 21px;
+}
+
+.catalog__item-last {
+
+  @include m.tablet {
+    background-color: #ffffff;
+    background-image: none;
+    border: 2px solid #f2f2f2;
+  }
+
+  @include m.desktop {
+    background-color: #ffffff;
+    background-image: none;
+    border: 2px solid #f2f2f2;
+  }
+}
+
+.catalog__item-wrapper-last {
+  flex-direction: column;
+  padding: 0 20px;
+
+  @include m.tablet {
+    padding: 0;
+  }
+
+  @include m.desktop {
+    padding: 0;
+  }
 }
