@@ -86,6 +86,11 @@
   margin: 0 auto;
   display: block;
   border: none;
+
+  &--grey {
+    background-color: var(--grey);
+    color: var(--special-grey);
+  }
 }
 
 .site__button-programs {
