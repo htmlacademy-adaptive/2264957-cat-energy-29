@@ -309,7 +309,7 @@
   margin-top: 37px;
 }
 
-.programs__item-button::after {
+/*.programs__item-button::after {
   content: "";
   display: inline-block;
   background-image: url("../img/icon/icon_arrow.svg");
@@ -318,6 +318,27 @@
   background-position: right;
   background-repeat: no-repeat;
   margin-left: 15px;
+}
+*/
+
+.programs__item-button::after {
+  content: "";
+  display: inline-block;
+  border-width: 7px;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-color: transparent;
+  border-left-color: #000000;
+  border-style: solid;
+}
+
+.programs__item-button::before {
+  content: "";
+  display: inline-block;
+  border-bottom: 2px solid #000000;
+  width: 20px;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .programs__header::before {
