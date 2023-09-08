@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -7,10 +7,14 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="./js/main.js" defer></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/source/img/favicons/apple-touch-icon.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/source/img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/source/img/favicons/manifest.webmanifest">
 </head>
 
 <body class="page__body no-js">
-  <header class="main-header main-header-main container">
+  <header class="main-header main-header-main ">
     <!-- Навигация -->
     <div class="main-header__wrapper">
       <a class="main-header__logo" href="#">
@@ -33,7 +37,7 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item-link--current" href="#">
+            <a class="main-nav__item-link main-nav__item-link-main main-nav__item-link--current" href="#">
               Главная
             </a>
           </li>
@@ -150,17 +154,17 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="container">
-      <div class="contacts__wrapper">
-        <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
-        <address class="contacts__address-point">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="contacts__wrapper">
+          <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
+          <address class="contacts__address-point">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
       </div>
-    </div>
+      <div id="map" class="contacts__ymap" style="width: 100%; height: 400px"></div>
       <picture class="contacts__wrapper-image">
         <source class="contacts__map" srcset="img/map-desktop.jpg" width="1440" height="400"
           media="(min-width: 1440px)">
-        <source class="contacts__map" srcset="img/map-desktop.jpg" width="768" height="400"
-          media="(min-width: 768px)">
-      <img class="contacts__map" src="img/map.jpg" width="320" height="362" alt="кэт энерджи на карте">
+        <source class="contacts__map" srcset="img/map-desktop.jpg" width="768" height="400" media="(min-width: 768px)">
+        <img class="contacts__map" src="img/map.jpg" width="320" height="362" alt="кэт энерджи на карте">
       </picture>
     </section>
   </main>
@@ -215,8 +219,10 @@
   </footer>
 
 
-
-
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e7c66693-e05c-42de-8da5-daaf062d9b85&lang=ru_RU"
+    type="text/javascript">
+  </script>
+  <script src="./js/map.js" defer></script>
 </body>
 
 </html>
