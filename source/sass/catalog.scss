@@ -50,10 +50,11 @@
 
   @include m.tablet {
     background-image: linear-gradient(#ffffff 80px, #eaeaea 80px, #eaeaea);
-    padding: 50px 36px 40px 36px;
+    padding: 0 36px 40px 36px;
     display: flex;
     flex-direction: column;
     margin-top: auto;
+    height: 100%;
   }
 
 }
@@ -89,6 +90,16 @@
   margin: 0 auto;
   margin-top: auto;
 
+}
+
+.catalog__item-image-s {
+
+  object-position: bottom;
+
+  @include m.tablet {
+    height: 206px;
+
+  }
 }
 
 
@@ -166,10 +177,14 @@
 
 .catalog__item-last {
 
+  padding-top: 25px;
+
   @include m.tablet {
     background-color: #ffffff;
     background-image: none;
     border: 2px solid #f2f2f2;
+    height: auto;
+    padding-top: 50px;
   }
 
   @include m.desktop {

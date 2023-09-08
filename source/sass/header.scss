@@ -129,7 +129,7 @@
   }
 }
 
-.main-nav__item-link-main .main-nav__item-link--current::after {
+.main-nav__item-link-main.main-nav__item-link--current::after {
 
   @include m.desktop {
     background-color: #ffffff;

@@ -8,6 +8,24 @@ const marks = [
   }
 ]
 
+let imageSource;
+
+let mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+if (mobile) {
+  imageSource = {
+    src: '../img/icon/map-pin.png',
+    size: [57, 53],
+    offset: [-28, -53]
+  }
+}else {
+  imageSource = {
+    src: '../img/icon/map-pin-desk.png',
+    size: [113, 106],
+    offset: [-56, -106]
+  }
+};
+
 function init(){
     // Создание карты.
     const myMap = new ymaps.Map("map", {
@@ -21,9 +39,9 @@ function init(){
       },
       {
         iconLayout: 'default#image',
-        iconImageHref: '../img/icon/map-pin.png',
-        iconImageSize: [57, 53],
-        iconImageOffset: [-28, -53]
+        iconImageHref: imageSource.src,
+        iconImageSize: imageSource.size,
+        iconImageOffset: imageSource.offset
       }))
     })
 
