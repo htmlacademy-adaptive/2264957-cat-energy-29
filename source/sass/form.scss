@@ -78,10 +78,21 @@
 
 .form__about-item {
   display: flex;
+  position: relative;
 }
 
 .form__about-item:not(:last-child) {
   margin-bottom: 23px;
+}
+
+
+
+.form__about-item-mail::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/sprite.svg#mail");
+  background-color: #000000;
+
 }
 
 .input-all {

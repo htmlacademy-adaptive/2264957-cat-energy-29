@@ -2,6 +2,7 @@
 
 .exampl {
   background-color: #eaeaea;
+  margin-top: 47px;
 
   @include m.tablet {
     background-image: linear-gradient(#ffffff 440px, #eaeaea 440px, #eaeaea);
@@ -14,7 +15,7 @@
 
 
 .exampl__wrapper {
-  padding: 25px 20px 40px 20px;
+  padding: 25px 0 40px 0;
 
   @include m.desktop {
     display: grid;
@@ -48,9 +49,8 @@
 }
 
 .exampl__title {
-  margin: 0 0 40px 0;
+  margin: 0 0 41px 0;
   color: #000000;
-  text-align: center;
   font-family: inherit;
   font-size: 36px;
   font-style: normal;
@@ -91,6 +91,12 @@
   bottom: -10px;
   background-color: #eaeaea;
   padding: 0 5px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
 
   @include m.tablet {
     background-color: #ffffff;
@@ -106,7 +112,7 @@
 .exampl__list {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 28px 0;
   gap: 32px;
 
   @include m.tablet {
@@ -119,7 +125,7 @@
   position: relative;
   box-shadow: inset 0 0 0 1px #cdcdcd;
   border-radius: 3px;
-  padding: 15px 15px 20px;
+  padding: 15px 15px 5px;
   min-width: 124px;
 
   @include m.tablet {
@@ -136,20 +142,19 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 7px;
+  margin-bottom: 18px;
 }
 
-.exampl__description {
-  color: #444444;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-}
 
 
 .exampl__stats {
+  color: #000;
+  text-align: center;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
   margin: 0 0 20px 0;
 }
