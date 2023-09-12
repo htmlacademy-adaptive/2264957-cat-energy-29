@@ -1,6 +1,7 @@
 @use "../sass/mixins/media.scss"as m;
 
 .exampl {
+  position: relative;
   background-color: #eaeaea;
   margin-top: 47px;
 
@@ -13,9 +14,21 @@
   }
 }
 
+.exampl::before {
+
+  @include m.tablet {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #cdcdcd;
+  width: 100%;
+  top: -21px;
+  left: 0;
+}
+}
+
 
 .exampl__wrapper {
-  padding: 25px 0 40px 0;
+  padding: 25px 0 16px 0;
 
   @include m.desktop {
     display: grid;
@@ -79,10 +92,25 @@
   border-radius: 100vw;
 }
 
-.image-before {
+.slider__image-container-before {
   position: absolute;
   inset: 0;
   width: var(--position);
+}
+
+.slider__image-container-after {
+  position: absolute;
+  width: calc(100% - var(--position));
+  height: 100%;
+  right: 0;
+}
+
+.image-after {
+  object-position: right;
+}
+
+.image-before {
+  object-position: left;
 }
 
 
@@ -91,6 +119,7 @@
   @include m.tablet {
     display: flex;
     justify-content: space-between;
+    align-items: center ;
   }
 
   @include m.desktop {
@@ -113,6 +142,7 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
+    margin-bottom: 60px;
   }
 
   @include m.desktop {
@@ -129,6 +159,11 @@
   font-weight: 400;
   line-height: 18px;
   margin: 0;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   @include m.desktop {
     grid-column: 1/2;

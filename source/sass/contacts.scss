@@ -31,6 +31,7 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  margin-right: 16px;
 }
 
 .contacts__address-point {
@@ -65,4 +66,9 @@
   display: block;
   position: relative;
   z-index: 1;
+  height: 362px;
+
+  @include m.tablet {
+    height: 400px;
+  }
 }
