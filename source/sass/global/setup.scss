@@ -69,6 +69,7 @@ dl {
 .line-mode {
   display: flex;
   gap: 20px;
+  align-items: center;
 
   @include m.tablet {
     gap: 40px;

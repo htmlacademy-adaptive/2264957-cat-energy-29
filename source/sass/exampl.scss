@@ -6,11 +6,12 @@
   margin-top: 47px;
 
   @include m.tablet {
-    background-image: linear-gradient(#ffffff 440px, #eaeaea 440px, #eaeaea);
+    background-image: linear-gradient(#ffffff 599px, #eaeaea 599px, #eaeaea);
   }
 
   @include m.desktop {
-    background-image: linear-gradient(#ffffff 100px, #eaeaea 100px, #eaeaea);
+    background-image: linear-gradient(#ffffff 168px, #eaeaea 168px, #eaeaea);
+    margin-top: 23px;
   }
 }
 
@@ -24,16 +25,25 @@
   top: -21px;
   left: 0;
 }
+
+ @include m.desktop {
+  border-bottom: none;
+ }
 }
 
 
 .exampl__wrapper {
   padding: 25px 0 16px 0;
 
+  @include m.tablet {
+    padding-bottom: 105px;
+  }
+
   @include m.desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
+    padding-bottom: 32px;
   }
 }
 
@@ -43,6 +53,10 @@
   max-height: 512px;
   aspect-ratio: 1/1;
   --position: 50%;
+
+  @include m.tablet {
+    margin: 0 auto;
+  }
 
   @include m.desktop {
     grid-column: 2/3;
@@ -147,6 +161,7 @@
 
   @include m.desktop {
     grid-column: 1/2;
+    margin-bottom: 146px;
   }
 
 }
@@ -187,8 +202,10 @@
 
   @include m.tablet {
     background-color: #ffffff;
-    width: 125px;
+    width: 135px;
     bottom: -4px;
+    font-size: 14px;
+    line-height: 14px;
   }
 
   @include m.desktop {
@@ -203,8 +220,12 @@
   gap: 32px;
 
   @include m.tablet {
-    gap: 42px;
+    gap: 35px;
     margin: 55px 0 99px 0;
+  }
+
+  @include m.desktop {
+    margin-bottom: 57px;
   }
 }
 
@@ -217,6 +238,11 @@
 
   @include m.tablet {
     min-width: 169px;
+    padding: 15px 15px 3px;
+  }
+
+  @include m.desktop {
+    padding: 28px 15px 5px;
   }
 }
 
@@ -230,6 +256,11 @@
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 18px;
+
+  @include m.tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 
@@ -244,4 +275,28 @@
   line-height: 20px;
   text-transform: uppercase;
   margin: 0 0 20px 0;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 45px;
+  }
+
+  @include m.desktop {
+    display: flex;
+  }
+}
+
+.exampl__stats-price {
+
+  @include m.tablet {
+    display: block;
+    text-align: right;
+    margin-top: 9px;
+  }
+
+  @include m.desktop {
+    margin-left: 63px;
+    margin-top: 0;
+  }
 }

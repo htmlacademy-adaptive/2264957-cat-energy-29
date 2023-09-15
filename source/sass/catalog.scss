@@ -17,6 +17,11 @@
     text-align: left;
     font-size: 60px;
     line-height: 60px;
+    margin: 39px 0 84px 0;
+  }
+
+  @include m.desktop {
+    margin: 15px 0 84px 0;
   }
 }
 
@@ -29,7 +34,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
     column-gap: 60px;
-    row-gap: 94px;
+    row-gap: 64px;
     margin-bottom: 25px;
   }
 
@@ -38,15 +43,15 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
     row-gap: 60px;
+    margin-bottom: 84px;
   }
 }
 
-.catalog-main__list {
-  margin-left: auto;
-}
+
 
 .catalog__item {
   position: relative;
+  margin-bottom: 20px;
 
   @include m.tablet {
     background-image: linear-gradient(#ffffff 80px, #eaeaea 80px, #eaeaea);
@@ -55,6 +60,7 @@
     flex-direction: column;
     margin-top: auto;
     height: 100%;
+    margin-bottom: 0;
   }
 
 }
@@ -62,10 +68,11 @@
 .catalog__item-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 19px 0;
+  padding: 20px 0 25px 32px;
 
   @include m.tablet {
     display: block;
+    padding-left: 0;
   }
 }
 
@@ -78,22 +85,27 @@
   line-height: 20px;
   text-transform: uppercase;
   margin-bottom: 14px;
+  width: 76px;
 
   @include m.tablet {
     display: block;
     text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 24px;
+    width: 135px;
     margin-bottom: 20px;
   }
 }
 
 .catalog__item-image {
   margin: 0 auto;
-  margin-top: auto;
+  margin-top: 5px;
 
 }
 
 .catalog__item-image-s {
-
+  margin-top: 11px;
   object-position: bottom;
 
   @include m.tablet {
@@ -112,13 +124,24 @@
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.catalog-main__list {
+  min-width: 140px;
 }
 
 .catalog-main__item {
   position: relative;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 12px;
 }
+
 
 .catalog-main__item::after {
   position: absolute;
@@ -144,7 +167,7 @@
     width: 100%;
   }
 
-  @include m.tablet {
+  @include m.desktop {
     width: 169px;
   }
 }
