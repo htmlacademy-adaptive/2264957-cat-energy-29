@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <script src="./js/main.js" defer></script>
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
   <link rel="icon" href="./favicon.ico">
@@ -62,6 +62,7 @@
     <!-- Форма заявки -->
     <section class="application">
       <div class="application__wrapper container">
+        <div class="form-container">
       <h2 class="visually-hidden">Форма заявки</h2>
       <p class="application__title">Подбор программы</p>
       <p class="application__description">
@@ -69,10 +70,11 @@
         программу питания для вашего кота
       </p>
     </div>
+    </div>
 
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <!-- Информация о коте -->
-        <div class="form__about-top container">
+        <div class="form__about-top form-container">
         <fieldset class="form__about">
           <legend class="visually-hidden">Форма ввода информации о коте</legend>
           <ul class="form__about-list container">
@@ -101,24 +103,24 @@
           </ul>
         </fieldset>
         <!-- Радиокнопки выбора программы -->
-        <fieldset class="form__about">
+        <fieldset class="form__about form__about-fat form-container">
           <legend class="visually-hidden">Выбор программы для кота</legend>
           <ul class="form__about-list form__about-list-fat container">
-            <li class="form__about-item">
+            <li class="form__about-item form__about-item-fat">
               <label class="control">
                 <input class="control-input visually-hidden" type="radio" name="programs-group" value="thin" checked>
                 <span class="control-mark control-mark-radio"></span>
                 <span class="control-label">Похудение</span>
               </label>
             </li>
-            <li class="form__about-item">
+            <li class="form__about-item form__about-item-fat">
               <label class="control">
                 <input class="control-input visually-hidden" type="radio" name="programs-group" value="weight">
                 <span class="control-mark control-mark-radio"></span>
                 <span class="control-label">Набор массы</span>
               </label>
             </li>
-            <li class="form__about-item">
+            <li class="form__about-item form__about-item-fat">
               <label class="control">
                 <input class="control-input visually-hidden" type="radio" name="programs-group" value="unnow">
                 <span class="control-mark control-mark-radio"></span>
@@ -131,10 +133,10 @@
         <!-- Информация о владельце кота -->
         <fieldset class="form__about">
           <div class="form__about-wrapper line-mode">
-          <legend class="form__about-title">Контактные данные
+          <legend class="form__about-title form__about-title-owner">Контактные данные
             (владельца кота)</legend>
           </div>
-          <ul class="form__about-list container">
+          <ul class="form__about-list container form-container">
 
             <li class="form__about-item form__about-item-mail">
               <label class="form__about-item-name" for="fild-about-mail">
@@ -152,11 +154,11 @@
           </ul>
         </fieldset>
         <!-- Комментарии -->
-        <fieldset class="form__about">
+        <fieldset class="form__about form__about-comment">
           <div class="form__about-wrapper line-mode">
-          <legend class="form__about-title">Комментарий</legend>
+          <legend class="form__about-title form__about-title-comment">Комментарий</legend>
           </div>
-          <p class="form__about-item container">
+          <p class="form__about-item container form-container">
             <label class="visually-hidden" for="fild-about-comment">Написать комментарий
             </label>
             <input class="about-input-comment input-all" type="text" id="fild-about-comment" name="fild-about-comment"
@@ -166,32 +168,32 @@
         <!-- Доболнительная информация чекбокс -->
         <fieldset class="form__about">
           <div class="form__about-wrapper line-mode">
-          <legend class="form__about-title">Дополнительно</legend>
+          <legend class="form__about-title form__about-title-add">Дополнительно</legend>
           </div>
-          <ul class="form__about-list form__about-list-add container">
+          <ul class="form__about-list form__about-list-add container form-container">
             <li class="form__about-item">
-              <label class="control">
+              <label class="control control-add">
                 <input class="control-input visually-hidden" type="checkbox" name="shugar" checked>
                 <span class="control-mark"></span>
                 <span class="control-label">сахарозаменитель</span>
               </label>
             </li>
             <li class="form__about-item">
-              <label class="control">
+              <label class="control control-add">
                 <input class="control-input visually-hidden" type="checkbox" name="water">
                 <span class="control-mark"></span>
                 <span class="control-label">питьевая вода</span>
               </label>
             </li>
             <li class="form__about-item">
-              <label class="control">
+              <label class="control control-add">
                 <input class="control-input visually-hidden" type="checkbox" name="milk">
                 <span class="control-mark"></span>
                 <span class="control-label">молоко</span>
               </label>
             </li>
             <li class="form__about-item">
-              <label class="control">
+              <label class="control control-add">
                 <input class="control-input visually-hidden" type="checkbox" name="vit">
                 <span class="control-mark"></span>
                 <span class="control-label">витамины</span>

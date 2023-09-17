@@ -78,14 +78,18 @@ dl {
 
 .line-mode::before {
   content: "";
-  height: 15px;
+  height: 7px;
   width: calc(50% - 160px);
   border-bottom: 2px solid #68b738;
+
+  @include m.tablet {
+    width: calc(24% - 160px);
+  }
 }
 
 .line-mode::after {
   content: "";
-  height: 15px;
+  height: 7px;
   width: 10px;
   border-bottom: 2px solid #68b738;
   flex-grow: 1;

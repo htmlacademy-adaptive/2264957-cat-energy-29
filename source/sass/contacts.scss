@@ -6,6 +6,8 @@
   min-height: 362px;
 }
 
+
+
 .contacts__wrapper {
   display: flex;
   justify-content: space-between;
@@ -24,6 +26,10 @@
     top: 50%;
     transform: translateY(-50%);
   }
+}
+
+.contacts__wrapper-form {
+  background-color: #f2f2f2;
 }
 
 .contacts__title {

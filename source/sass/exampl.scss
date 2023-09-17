@@ -18,17 +18,17 @@
 .exampl::before {
 
   @include m.tablet {
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid #cdcdcd;
-  width: 100%;
-  top: -21px;
-  left: 0;
-}
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #cdcdcd;
+    width: 100%;
+    top: -21px;
+    left: 0;
+  }
 
- @include m.desktop {
-  border-bottom: none;
- }
+  @include m.desktop {
+    border-bottom: none;
+  }
 }
 
 
@@ -49,13 +49,14 @@
 
 .slider {
   position: relative;
-  max-width: 560px;
-  max-height: 512px;
-  aspect-ratio: 1/1;
+  width: 280px;
+  height: 256px;
   --position: 50%;
 
   @include m.tablet {
     margin: 0 auto;
+    width: 560px;
+    height: 512px;
   }
 
   @include m.desktop {
@@ -133,7 +134,7 @@
   @include m.tablet {
     display: flex;
     justify-content: space-between;
-    align-items: center ;
+    align-items: center;
   }
 
   @include m.desktop {
