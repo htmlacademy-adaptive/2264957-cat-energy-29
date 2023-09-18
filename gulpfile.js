@@ -73,7 +73,7 @@ const createWebp = (done) => {
  // Svg
 
  const svgTask = (done) => {
-  gulp.src(['source/img/icons/*.svg', 'source/img/logo/*.svg'])
+  gulp.src(['source/img/**/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest("build/img"));
   done()
@@ -96,7 +96,6 @@ const copy = (done) => {
   gulp.src([
   "source/fonts/**/*.{woff2,woff}",
   "source/*.ico",
-  "source/manifest.webmanifest",
   "!source/img/icons/*.svg",
   ], {
   base: "source"
@@ -146,7 +145,7 @@ const watcher = (done) => {
 
 // Build
 
-const build = gulp.series(
+export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
@@ -163,7 +162,7 @@ const build = gulp.series(
 
 // Default
 
-exports.default = gulp.series(
+export default  gulp.series(
   clean,
   copy,
   copyImages,
