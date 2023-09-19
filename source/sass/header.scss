@@ -81,14 +81,14 @@
   @include m.desktop {
     font-size: 20px;
     color: #ffffff;
-
-    &:hover {
-      opacity: 0.7;
-    }
   }
 
-  &::hover {
-    opacity: 0.6;
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

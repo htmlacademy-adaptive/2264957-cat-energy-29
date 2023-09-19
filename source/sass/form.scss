@@ -195,13 +195,13 @@
 .form__about-item-mail::after {
   content: "";
   position: absolute;
-  background-image: url("../img/sprite/sprite.svg#mail");
+  mask-image: url("../img/sprite.svg#mail");
   width: 17px;
   height: 13px;
   display: block;
-  background-color: #000000;
   right: 12px;
   top: 13px;
+  background-color: #000000;
 
   @include m.tablet {
     right: 16px;
@@ -211,7 +211,10 @@
 
 .form__about-item-mail,
 .form__about-item-phone {
+
+  @include m.desktop {
   min-width: 569px;
+  }
 }
 
 .form__about-item-phone {
@@ -222,18 +225,20 @@
 }
 
 .form__about-list-contacts {
+
+  @include m.desktop {
   display: flex;
   justify-content: space-between;
+  }
 }
 
 .form__about-item-phone::after {
   content: "";
   position: absolute;
-  background-image: url("../img/sprite/sprite.svg#phone");
-  width: 17px;
-  height: 13px;
+  background-image: url("../img/sprite.svg#phone");
+  width: 20px;
+  height: 20px;
   display: block;
-  background-color: #000000;
   right: 12px;
   top: 13px;
 
@@ -274,6 +279,7 @@
   }
 }
 
+
 .control-label {
   color: #444444;
   font-family: inherit;
@@ -299,8 +305,8 @@
     margin-bottom: 10px;
   }
 
-  &.control-mark:hover {
-    border: 1px solid red
+  &::disabled {
+    opacity: 0.3;
   }
 }
 
@@ -310,12 +316,16 @@
   left: 0;
   width: 30px;
   height: 30px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #ececec;
 
   @include m.tablet {
     width: 40px;
     height: 40px;
     top: -9px;
+  }
+
+  &:hover {
+    border: 1px solid #cdcdcd;
   }
 }
 
@@ -351,6 +361,7 @@
   @include m.tablet {
     width: 40px;
     height: 40px;
+    background-image: url("../img/icon/checkbox.svg");
   }
 }
 
