@@ -21,10 +21,11 @@
 
   @include m.desktop {
     position: absolute;
-    padding: 65px 83px;
+    padding: 65px 79px;
     width: 565px;
     top: 50%;
     transform: translateY(-50%);
+    margin-top: -6px;
   }
 }
 
@@ -74,7 +75,7 @@
 
   @include m.tablet {
     display: block;
-    margin-top: 7px;
+    margin-top: 19px;
   }
 }
 

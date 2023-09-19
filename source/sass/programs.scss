@@ -98,6 +98,33 @@
     background-color: var(--grey);
     color: var(--special-grey);
   }
+
+  &--grey:hover {
+    background-color: #ebebeb;
+  }
+
+  &--grey:active {
+    background-color: #ebebeb;
+    opacity: 0.3;
+  }
+
+  &:hover {
+    background-color: #5EAA2F;
+  }
+
+  &:active {
+    background-color: #5EAA2F;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--grey:hover {
+    background-color: #ebebeb;
+  }
+
+  &--grey:active {
+    background-color: #ebebeb;
+    opacity: 0.3;
+  }
 }
 
 .site__button-programs {
@@ -147,7 +174,7 @@
   }
 
   @include m.desktop {
-    margin: 0;
+    margin-bottom: 71px;
   }
 }
 
@@ -345,6 +372,22 @@
   @include m.desktop {
     margin: 0;
   }
+
+  &:active {
+    color: #d9d9d9;
+  }
+
+  &:hover::before {
+    width: 25px;
+  }
+
+  &:active::before {
+    border-bottom: #d9d9d9;
+  }
+
+  &:active::after {
+    border-left-color: #d9d9d9;
+  }
 }
 
 
@@ -359,9 +402,6 @@
   border-style: solid;
   order: 2;
 
-  &:active {
-    border-left-color: #d9d9d9;
-  }
 }
 
 .programs__item-button::before {
@@ -379,13 +419,6 @@
     margin-left: 25px;
   }
 
-  &:hover {
-    width: 25px;
-  }
-
-  &:active {
-    border-bottom: #d9d9d9;
-  }
 }
 
 .programs__header::before {

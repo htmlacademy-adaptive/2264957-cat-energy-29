@@ -33,7 +33,7 @@
 
 
 .exampl__wrapper {
-  padding: 25px 0 16px 0;
+  padding: 25px 0 40px 0;
 
   @include m.tablet {
     padding-bottom: 105px;
@@ -63,6 +63,8 @@
     grid-column: 2/3;
     grid-row: 1/4;
     align-self: center;
+    margin-left: 47px;
+    margin-bottom: 50px;
   }
 }
 
@@ -89,7 +91,6 @@
 
 .slider__line {
   position: absolute;
-  inset: 0;
   width: 2px;
   height: 100%;
   background-color: #666666;

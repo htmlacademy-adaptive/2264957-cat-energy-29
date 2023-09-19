@@ -85,6 +85,10 @@ dl {
   @include m.tablet {
     width: calc(24% - 160px);
   }
+
+  @include m.desktop {
+    width: calc(16% - 160px);
+  }
 }
 
 .line-mode::after {

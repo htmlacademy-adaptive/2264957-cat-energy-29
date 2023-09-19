@@ -121,6 +121,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    browser: "msedge"
   });
   done();
 }
@@ -135,7 +136,7 @@ const reload = (done) => {
 // Watcher
 
 const watcher = (done) => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/sass/**/*.sass', gulp.series(styles));
   gulp.watch('source/js/main.js', gulp.series(scripts));
   gulp.watch('source/js/map.js', gulp.series(scripts));
   gulp.watch('source/js/slider.js', gulp.series(scripts));

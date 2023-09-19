@@ -1,26 +1,28 @@
 @use "../sass/mixins/media.scss"as m;
 
-/*.form-container {
+.form-container {
 
   @include m.tablet {
-    margin-left: 69px;
+    padding-left: 40px;
   }
 
   @include m.desktop {
-    margin-left: 0;
+    padding-left: 0;
   }
 }
-*/
+
 .application {
 
   @include m.tablet {
-    margin-left: 69px;
+    margin-bottom: 43px;
   }
 
-  @include m.desktop {
-    margin-left: 0;
+  @include m.tablet {
+    margin-bottom: 67px;
   }
+
 }
+
 
 .application__title {
   color: #000000;
@@ -76,6 +78,7 @@
 
 .form__about-comment {
   padding: 0;
+  margin-bottom: 53px;
 }
 
 .form__about-list {
@@ -100,6 +103,10 @@
   width: 100%;
   top: 0;
   left: 0;
+
+  @include m.tablet {
+    border-bottom: none;
+  }
 }
 
 .form__about-list-fat::after {
@@ -109,10 +116,18 @@
   width: 100%;
   top: 100%;
   left: 0;
+
+  @include m.tablet {
+    border-bottom: none;
+  }
 }
 
 .form__about-fat {
   margin-top: 30px;
+
+  @include m.desktop {
+    margin-top: 0;
+  }
 }
 
 .form__about-list-add {
@@ -120,11 +135,13 @@
   @include m.tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 30px;
+    row-gap: 25px;
   }
 
   @include m.desktop {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 86px;
   }
 }
 
@@ -178,13 +195,56 @@
 .form__about-item-mail::after {
   content: "";
   position: absolute;
-  background-image: url("../img/sprite.svg#mail");
+  background-image: url("../img/sprite/sprite.svg#mail");
+  width: 17px;
+  height: 13px;
+  display: block;
   background-color: #000000;
+  right: 12px;
+  top: 13px;
 
+  @include m.tablet {
+    right: 16px;
+    top: 16px;
+  }
+}
+
+.form__about-item-mail,
+.form__about-item-phone {
+  min-width: 569px;
+}
+
+.form__about-item-phone {
+
+  @include m.desktop {
+    margin-bottom: 18px;
+  }
+}
+
+.form__about-list-contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__about-item-phone::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/sprite/sprite.svg#phone");
+  width: 17px;
+  height: 13px;
+  display: block;
+  background-color: #000000;
+  right: 12px;
+  top: 13px;
+
+  @include m.tablet {
+    right: 16px;
+    top: 16px;
+  }
 }
 
 .input-all {
-  border: 1px solid #cdcdcd;
+  border: 1px solid #e7e7e7;
   padding: 13px 14px;
   color: #444444;
   font-family: inherit;
@@ -200,6 +260,18 @@
     padding: 11px 14px 11px 19px;
   }
 
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 1px solid #444444;
+  }
+
+  &:disabled {
+    border: 1px solid #ff8282;
+  }
 }
 
 .control-label {
@@ -271,6 +343,11 @@
   width: 30px;
   height: 30px;
   border: none;
+
+  @include m.tablet {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .control-add {
@@ -318,15 +395,12 @@
     margin-top: 43px;
     margin-bottom: 49px;
   }
-}
 
-.form__about-title-add {
-
-  @include m.tablet {
-    margin-top: 57px;
-    margin-bottom: 31px;
+  @include m.desktop {
+    margin-top: 31px;
   }
 }
+
 
 .about-add__list {
   margin: 0;
@@ -340,6 +414,10 @@
 .about-input-comment {
   width: 280px;
   padding-bottom: 118px;
+
+  @include m.tablet {
+    width: 100%;
+  }
 }
 
 .form__legend {
@@ -353,6 +431,17 @@
   margin-top: 21px;
   display: block;
   margin-bottom: 32px;
+
+  @include m.tablet {
+    margin-top: 31px;
+    margin-left: 60px;
+    font-size: 16px;
+  }
+
+  @include m.desktop {
+    margin-top: 37px;
+    margin-left: 80px;
+  }
 }
 
 .about-mail__item:not(:last-child) {
@@ -382,7 +471,16 @@
   line-height: 20px;
 
   @include m.tablet {
-    width: 192px;
+    width: 282px;
+    margin: 0;
+    height: 56px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  @include m.desktop {
+    width: 570px;
+    margin-top: 19px;
   }
 }
 

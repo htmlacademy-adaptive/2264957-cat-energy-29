@@ -81,6 +81,14 @@
   @include m.desktop {
     font-size: 20px;
     color: #ffffff;
+
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+
+  &::hover {
+    opacity: 0.3;
   }
 }
 
@@ -99,7 +107,9 @@
   @include m.tablet {
     padding: 22px 0;
   }
-}
+
+  }
+
 
 .main-nav__item:before {
   content: "";
@@ -223,6 +233,8 @@
   background-color: #ffffff;
   z-index: 3;
   display: none;
+  left: 0;
+  top: 65px;
 
 
   @include m.tablet {
