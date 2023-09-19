@@ -1,5 +1,29 @@
 @use "../sass/mixins/media.scss"as m;
 
+.form-container {
+
+  @include m.tablet {
+    padding-left: 40px;
+  }
+
+  @include m.desktop {
+    padding-left: 0;
+  }
+}
+
+.application {
+
+  @include m.tablet {
+    margin-bottom: 43px;
+  }
+
+  @include m.tablet {
+    margin-bottom: 67px;
+  }
+
+}
+
+
 .application__title {
   color: #000000;
   font-family: inherit;
@@ -7,11 +31,21 @@
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
-  margin: 0 0 37px 0;
+  margin: 27px 0 37px 0;
+
+  @include m.tablet {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 38px 0 54px 0;
+  }
+
+  @include m.desktop {
+    margin: 16px 0 54px 0;
+  }
 }
 
 .application__description {
-  margin: 0 0 53px 0;
+  margin: 0 0 15px 0;
   color: #000000;
   font-family: inherit;
   font-size: 14px;
@@ -19,12 +53,32 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 41px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 43px;
+  }
 }
 
 .form__about {
+  position: relative;
   margin: 0;
   border: none;
   padding: 24px 0;
+
+  @include m.tablet {
+    padding: 22px 0;
+  }
+}
+
+.form__about-comment {
+  padding: 0;
+  margin-bottom: 53px;
 }
 
 .form__about-list {
@@ -35,9 +89,44 @@
 .form__about-list-fat {
 
   @include m.tablet {
-  border: 2px solid #cdcdcd;
+    border: 2px solid #cdcdcd;
+    width: 100%;
+    padding: 28px 27px 23px 27px;
+    margin-bottom: 30px;
+  }
+}
+
+.form__about-list-fat::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #cdcdcd;
   width: 100%;
-  padding: 23px 27px;
+  top: 0;
+  left: 0;
+
+  @include m.tablet {
+    border-bottom: none;
+  }
+}
+
+.form__about-list-fat::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #cdcdcd;
+  width: 100%;
+  top: 100%;
+  left: 0;
+
+  @include m.tablet {
+    border-bottom: none;
+  }
+}
+
+.form__about-fat {
+  margin-top: 30px;
+
+  @include m.desktop {
+    margin-top: 0;
   }
 }
 
@@ -46,11 +135,13 @@
   @include m.tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 30px;
+    row-gap: 25px;
   }
 
   @include m.desktop {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 86px;
   }
 }
 
@@ -65,7 +156,7 @@
 }
 
 .form__about-item-name {
-  margin-right: 18px;
+  margin-right: 14px;
   flex-shrink: 0;
   color: #444444;
   font-family: inherit;
@@ -74,19 +165,87 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+  margin-top: 14px;
+
+  @include m.tablet {
+    font-size: 20px;
+    margin-top: 18px;
+  }
 }
 
 .form__about-item {
   display: flex;
+  position: relative;
 }
 
 .form__about-item:not(:last-child) {
-  margin-bottom: 23px;
+  margin-bottom: 13px;
+
+  @include m.tablet {
+    margin-bottom: 18px;
+  }
+}
+
+.form__about-item-fat:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+
+
+.form__about-item-mail::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/sprite/sprite.svg#mail");
+  width: 17px;
+  height: 13px;
+  display: block;
+  background-color: #000000;
+  right: 12px;
+  top: 13px;
+
+  @include m.tablet {
+    right: 16px;
+    top: 16px;
+  }
+}
+
+.form__about-item-mail,
+.form__about-item-phone {
+  min-width: 569px;
+}
+
+.form__about-item-phone {
+
+  @include m.desktop {
+    margin-bottom: 18px;
+  }
+}
+
+.form__about-list-contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__about-item-phone::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/sprite/sprite.svg#phone");
+  width: 17px;
+  height: 13px;
+  display: block;
+  background-color: #000000;
+  right: 12px;
+  top: 13px;
+
+  @include m.tablet {
+    right: 16px;
+    top: 16px;
+  }
 }
 
 .input-all {
-  border: 1px solid #cdcdcd;
-  padding: 15px 14px;
+  border: 1px solid #e7e7e7;
+  padding: 13px 14px;
   color: #444444;
   font-family: inherit;
   font-size: 16px;
@@ -95,6 +254,24 @@
   line-height: 18px;
   text-transform: uppercase;
   width: 100%;
+
+  @include m.tablet {
+    font-size: 20px;
+    padding: 11px 14px 11px 19px;
+  }
+
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 1px solid #444444;
+  }
+
+  &:disabled {
+    border: 1px solid #ff8282;
+  }
 }
 
 .control-label {
@@ -105,21 +282,37 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+  margin-left: 10px;
+
+  @include m.tablet {
+    font-size: 20px;
+    margin-left: 22px;
+  }
 }
 
 .control {
   position: relative;
   display: block;
   padding-left: 36px;
+
+  @include m.tablet {
+    margin-bottom: 10px;
+  }
 }
 
 .control-mark {
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 0;
   width: 30px;
   height: 30px;
   border: 1px solid #cdcdcd;
+
+  @include m.tablet {
+    width: 40px;
+    height: 40px;
+    top: -9px;
+  }
 }
 
 .control-mark-radio {
@@ -131,11 +324,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 18px;
-  height: 18px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background-color: #68b738;
   content: "";
+
+  @include m.tablet {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .control-input[type="checkbox"]:checked+.control-mark {
@@ -145,10 +343,23 @@
   width: 30px;
   height: 30px;
   border: none;
+
+  @include m.tablet {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.control-add {
+  margin-bottom: 5px;
 }
 
 .programs-form__item:not(:last-child) {
   margin-bottom: 13px;
+}
+
+.form__about-wrapper {
+  margin-bottom: 36px;
 }
 
 .form__about-title {
@@ -158,12 +369,38 @@
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
-  margin-bottom: 36px;
 
   @include m.tablet {
-    margin-bottom: 76px;
+    font-size: 36px;
+    line-height: 36px;
   }
 }
+
+.form__about-title-owner {
+  width: 186px;
+
+  @include m.tablet {
+    width: 518px;
+
+    @include m.tablet {
+      margin-top: 24px;
+      margin-bottom: 38px;
+    }
+  }
+}
+
+.form__about-title-comment {
+
+  @include m.tablet {
+    margin-top: 43px;
+    margin-bottom: 49px;
+  }
+
+  @include m.desktop {
+    margin-top: 31px;
+  }
+}
+
 
 .about-add__list {
   margin: 0;
@@ -177,6 +414,10 @@
 .about-input-comment {
   width: 280px;
   padding-bottom: 118px;
+
+  @include m.tablet {
+    width: 100%;
+  }
 }
 
 .form__legend {
@@ -189,6 +430,18 @@
   line-height: 16px;
   margin-top: 21px;
   display: block;
+  margin-bottom: 32px;
+
+  @include m.tablet {
+    margin-top: 31px;
+    margin-left: 60px;
+    font-size: 16px;
+  }
+
+  @include m.desktop {
+    margin-top: 37px;
+    margin-left: 80px;
+  }
 }
 
 .about-mail__item:not(:last-child) {
@@ -207,16 +460,27 @@
 .form__about-bottom {
 
   @include m.tablet {
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
   }
 }
 
 .site__button-form {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 20px;
 
   @include m.tablet {
-    width: 192px;
+    width: 282px;
+    margin: 0;
+    height: 56px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  @include m.desktop {
+    width: 570px;
+    margin-top: 19px;
   }
 }
-
 

@@ -69,6 +69,7 @@ dl {
 .line-mode {
   display: flex;
   gap: 20px;
+  align-items: center;
 
   @include m.tablet {
     gap: 40px;
@@ -77,14 +78,22 @@ dl {
 
 .line-mode::before {
   content: "";
-  height: 15px;
+  height: 7px;
   width: calc(50% - 160px);
   border-bottom: 2px solid #68b738;
+
+  @include m.tablet {
+    width: calc(24% - 160px);
+  }
+
+  @include m.desktop {
+    width: calc(16% - 160px);
+  }
 }
 
 .line-mode::after {
   content: "";
-  height: 15px;
+  height: 7px;
   width: 10px;
   border-bottom: 2px solid #68b738;
   flex-grow: 1;

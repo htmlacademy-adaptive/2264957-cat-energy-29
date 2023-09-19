@@ -3,15 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="./js/main.js" defer></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./img/favicons/manifest.webmanifest">
 </head>
 
-<body class="page__body">
-  <header class="main-header container">
+<body class="page__body no-js">
+  <header class="main-header main-header-main ">
     <!-- Навигация -->
-    <div class="main-header__wrapper ">
+    <div class="main-header__wrapper">
       <a class="main-header__logo" href="#">
         <picture class="main-header__logo-wrapper">
           <source class="main-header__logo-image-desktop" width="202" height="59" srcset="img/logo/logo-desktop.svg"
@@ -32,12 +37,12 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__item-link  main-nav__item-link-catalog" href="index.html">
+            <a class="main-nav__item-link main-nav__item-link-catalog" href="index.html">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item-link--current main-nav__item-link-catalog" href="catalog.html">
+            <a class="main-nav__item-link main-nav__item-link-catalog main-nav__item-link--current" href="catalog.html">
               Каталог продукции
             </a>
           </li>
@@ -67,7 +72,7 @@
               <img class="catalog__item-image catalog__item-image-s" src="img/catalog-cans/pro-500.png" width="68" height="86" alt="#">
             </picture>
             <dl class="catalog-main__list">
-              <a class="catalog-main__title" href="#">Cat Energy<br> PRO 500 г</a>
+              <a class="catalog-main__title" href="#">Cat Energy PRO 500 г</a>
               <div class="catalog-main__item">
                 <dt class="catalog-main__compound">
                   Масса
@@ -106,7 +111,7 @@
               <img class="catalog__item-image" src="img/catalog-cans/pro-1000.png" width="84" height="100" alt="#">
             </picture>
             <dl class="catalog-main__list">
-              <a class="catalog-main__title" href="#">Cat Energy<br> PRO 1000 г</a>
+              <a class="catalog-main__title" href="#">Cat Energy PRO 1000 г</a>
               <div class="catalog-main__item">
                 <dt class="catalog-main__compound">
                   Масса
@@ -145,7 +150,7 @@
               <img class="catalog__item-image catalog__item-image-s" src="img/catalog-cans/pro-500-green.png" width="68" height="78" alt="#">
             </picture>
             <dl class="catalog-main__list">
-              <a class="catalog-main__title" href="#">Cat Energy<br>
+              <a class="catalog-main__title" href="#">Cat Energy
                 PRO
                 500 г</a>
               <div class="catalog-main__item">
@@ -187,7 +192,7 @@
                 alt="#">
             </picture>
             <dl class="catalog-main__list">
-              <a class="catalog-main__title" href="#">Cat Energy<br>
+              <a class="catalog-main__title" href="#">Cat Energy
                 PRO
                 1000 г</a>
               <div class="catalog-main__item">
@@ -228,7 +233,7 @@
               <img class="catalog__item-image catalog__item-image-s" src="img/catalog-cans/slim-500.png" width="68" height="78" alt="#">
             </picture>
             <dl class="catalog-main__list">
-              <a class="catalog-main__title" href="#">Cat Energy<br>
+              <a class="catalog-main__title" href="#">Cat Energy
                 slim
                 500 г</a>
               <div class="catalog-main__item">
@@ -270,7 +275,7 @@
               <img class="catalog__item-image" src="img/catalog-cans/slim-1000.png" width="84" height="100" alt="#">
             </picture>
               <dl class="catalog-main__list">
-                <a class="catalog-main__title" href="#">Cat Energy<br> slim 1000 г</a>
+                <a class="catalog-main__title" href="#">Cat Energy slim 1000 г</a>
                 <div class="catalog-main__item">
                   <dt class="catalog-main__compound">
                     Масса
@@ -311,7 +316,7 @@
                 alt="#">
             </picture>
             <dl class="catalog-main__list">
-              <a class="catalog-main__title" href="#">Cat Energy<br>
+              <a class="catalog-main__title" href="#">Cat Energy
                 slim
                 500 г</a>
               <div class="catalog-main__item">
@@ -408,7 +413,7 @@
               300 ₽
             </dd>
           </dl>
-          <button class="site__button site__button-catalog site__button-catalog-bottom" type="button">Заказать</button>
+          <button class="site__button site__button-catalog site__button-catalog-last site__button-catalog-bottom" type="button">Заказать</button>
         </li>
 
       </ul>
@@ -427,29 +432,32 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="container">
-      <div class="contacts__wrapper">
-        <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
-        <address class="contacts__address-point">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="contacts__wrapper">
+          <h3 class="contacts__title">приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+          <address class="contacts__address-point">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address-point-city">Санкт-Петербург</span></address>
+        </div>
       </div>
-    </div>
-      <picture class="contacts__wrapper-image">
-        <source class="contacts__map" srcset="img/map-desktop.jpg" width="1440" height="400"
-          media="(min-width: 1440px)">
-        <source class="contacts__map" srcset="img/map-desktop.jpg" width="768" height="400"
-          media="(min-width: 768px)">
-      <img class="contacts__map" src="img/map.jpg" width="320" height="362" alt="кэт энерджи на карте">
-      </picture>
+      <div id="map" class="contacts__ymap" style="width: 100%"></div>
+      <noscript>
+        <picture class="contacts__wrapper-image">
+          <source  srcset="img/map-desktop.jpg" width="1440" height="400"
+            media="(min-width: 1440px)">
+          <source  srcset="img/map-desktop.jpg" width="768" height="400"
+            media="(min-width: 768px)">
+          <img class="contacts__map" src="img/map.jpg" width="320" height="362" alt="кэт энерджи на карте">
+        </picture>
+      </noscript>
     </section>
   </main>
   <!-- Подвал -->
   <footer class="page__footer">
     <div class="page__footer-wrapper container">
-      <a class="footer__logo">
+      <a class="footer__logo footer-border">
         <img class="footer__logo-image" src="img/logo/logo-2.svg" width="128" height="24"
           alt="Логотип текст кэт енерджи">
       </a>
 
-      <div class="social">
+      <div class="social footer-border footer-border-social">
         <a class="social__link social__vk" href="#">
           <svg class="social__image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="28"
             height="22" viewBox="0 0 28 22">
@@ -490,6 +498,13 @@
       </div>
     </div>
   </footer>
+
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e7c66693-e05c-42de-8da5-daaf062d9b85&lang=ru_RU"
+    type="text/javascript">
+  </script>
+  <script src="./js/map.js" defer></script>
+  <script src="./js/slider.js" defer></script>
 </body>
 
 </html>

@@ -3,16 +3,19 @@
 .main-header {
   background-color: transparent;
   position: relative;
+  padding: 13px 20px 11px 20px;
 
   @include m.tablet {
     display: flex;
     width: 708px;
     margin: 0 auto;
+    padding: 17px 0;
   }
 
   @include m.desktop {
     display: flex;
     width: 1220px;
+    padding: 52px 0;
   }
 }
 
@@ -28,6 +31,7 @@
 }
 
 .main-header__logo-image {
+  margin-right: 10px;
 
   &:hover {
     opacity: 0.8;
@@ -77,6 +81,14 @@
   @include m.desktop {
     font-size: 20px;
     color: #ffffff;
+
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+
+  &::hover {
+    opacity: 0.3;
   }
 }
 
@@ -91,7 +103,13 @@
   position: relative;
   padding: 24px 0;
   text-align: center;
-}
+
+  @include m.tablet {
+    padding: 22px 0;
+  }
+
+  }
+
 
 .main-nav__item:before {
   content: "";
@@ -119,13 +137,12 @@
   @include m.tablet {
     position: absolute;
     content: "";
-    top: 75%;
+    top: 128%;
     left: 0;
     width: 100%;
     display: block;
     height: 2px;
     background-color: #68B738;
-    margin-top: 8px;
   }
 }
 
@@ -216,6 +233,8 @@
   background-color: #ffffff;
   z-index: 3;
   display: none;
+  left: 0;
+  top: 65px;
 
 
   @include m.tablet {
@@ -224,6 +243,7 @@
     width: auto;
     margin-left: auto;
     background-color: transparent;
+    margin-right: 5px;
   }
 
   @include m.desktop {

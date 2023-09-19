@@ -1,35 +1,132 @@
 @use "../sass/mixins/media.scss"as m;
 
 .exampl {
+  position: relative;
   background-color: #eaeaea;
+  margin-top: 47px;
 
   @include m.tablet {
-    background-image: linear-gradient(#ffffff 440px, #eaeaea 440px, #eaeaea);
+    background-image: linear-gradient(#ffffff 599px, #eaeaea 599px, #eaeaea);
   }
 
   @include m.desktop {
-    background-image: linear-gradient(#ffffff 100px, #eaeaea 100px, #eaeaea);
+    background-image: linear-gradient(#ffffff 168px, #eaeaea 168px, #eaeaea);
+    margin-top: 23px;
+  }
+}
+
+.exampl::before {
+
+  @include m.tablet {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #cdcdcd;
+    width: 100%;
+    top: -21px;
+    left: 0;
+  }
+
+  @include m.desktop {
+    border-bottom: none;
   }
 }
 
 
 .exampl__wrapper {
-  padding: 25px 20px 40px 20px;
+  padding: 25px 0 40px 0;
+
+  @include m.tablet {
+    padding-bottom: 105px;
+  }
 
   @include m.desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
+    padding-bottom: 32px;
   }
 }
 
 .slider {
+  position: relative;
+  width: 280px;
+  height: 256px;
+  --position: 50%;
+
+  @include m.tablet {
+    margin: 0 auto;
+    width: 560px;
+    height: 512px;
+  }
 
   @include m.desktop {
     grid-column: 2/3;
     grid-row: 1/4;
     align-self: center;
+    margin-left: 47px;
+    margin-bottom: 50px;
   }
+}
+
+.slider__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.slider__input {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__input:focus-visible~.slider__button {
+  outline: 5px solid #000000;
+  outline-offset: 1px;
+}
+
+.slider__line {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #666666;
+  left: var(--position);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.slider__button {
+  position: absolute;
+  top: 50%;
+  left: var(--position);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 100vw;
+}
+
+.slider__image-container-before {
+  position: absolute;
+  inset: 0;
+  width: var(--position);
+}
+
+.slider__image-container-after {
+  position: absolute;
+  width: calc(100% - var(--position));
+  height: 100%;
+  right: 0;
+}
+
+.image-after {
+  object-position: right;
+}
+
+.image-before {
+  object-position: left;
 }
 
 
@@ -38,6 +135,7 @@
   @include m.tablet {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   @include m.desktop {
@@ -48,9 +146,8 @@
 }
 
 .exampl__title {
-  margin: 0 0 40px 0;
+  margin: 0 0 41px 0;
   color: #000000;
-  text-align: center;
   font-family: inherit;
   font-size: 36px;
   font-style: normal;
@@ -61,10 +158,12 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
+    margin-bottom: 60px;
   }
 
   @include m.desktop {
     grid-column: 1/2;
+    margin-bottom: 146px;
   }
 
 }
@@ -77,6 +176,11 @@
   font-weight: 400;
   line-height: 18px;
   margin: 0;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   @include m.desktop {
     grid-column: 1/2;
@@ -91,11 +195,19 @@
   bottom: -10px;
   background-color: #eaeaea;
   padding: 0 5px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
 
   @include m.tablet {
     background-color: #ffffff;
-    width: 125px;
+    width: 135px;
     bottom: -4px;
+    font-size: 14px;
+    line-height: 14px;
   }
 
   @include m.desktop {
@@ -106,12 +218,16 @@
 .exampl__list {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 28px 0;
   gap: 32px;
 
   @include m.tablet {
-    gap: 42px;
+    gap: 35px;
     margin: 55px 0 99px 0;
+  }
+
+  @include m.desktop {
+    margin-bottom: 57px;
   }
 }
 
@@ -119,11 +235,16 @@
   position: relative;
   box-shadow: inset 0 0 0 1px #cdcdcd;
   border-radius: 3px;
-  padding: 15px 15px 20px;
+  padding: 15px 15px 5px;
   min-width: 124px;
 
   @include m.tablet {
     min-width: 169px;
+    padding: 15px 15px 3px;
+  }
+
+  @include m.desktop {
+    padding: 28px 15px 5px;
   }
 }
 
@@ -136,20 +257,48 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 7px;
+  margin-bottom: 18px;
+
+  @include m.tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
-.exampl__description {
-  color: #444444;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-}
 
 
 .exampl__stats {
+  color: #000;
+  text-align: center;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
   margin: 0 0 20px 0;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 45px;
+  }
+
+  @include m.desktop {
+    display: flex;
+  }
+}
+
+.exampl__stats-price {
+
+  @include m.tablet {
+    display: block;
+    text-align: right;
+    margin-top: 9px;
+  }
+
+  @include m.desktop {
+    margin-left: 63px;
+    margin-top: 0;
+  }
 }
