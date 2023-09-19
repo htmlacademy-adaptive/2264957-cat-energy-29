@@ -298,6 +298,10 @@
   @include m.tablet {
     margin-bottom: 10px;
   }
+
+  &.control-mark:hover {
+    border: 1px solid red
+  }
 }
 
 .control-mark {
